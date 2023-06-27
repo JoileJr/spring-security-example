@@ -26,4 +26,9 @@ public class Product {
 
     private Integer price;
 
+    public Product(ProductRequestDTO data){
+        this.price = data.price();
+        this.name = data.name();
+    }
+
 }

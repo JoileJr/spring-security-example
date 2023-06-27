@@ -10,9 +10,9 @@ import com.example.springSecurity.repository.UserRepository;
 
 @Service
 public class AuthorizationService implements UserDetailsService {
+    
     @Autowired
-    private UserRepository repository;
-
+    UserRepository repository;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return repository.findByLogin(username);
